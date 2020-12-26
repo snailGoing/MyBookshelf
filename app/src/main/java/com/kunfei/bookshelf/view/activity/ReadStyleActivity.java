@@ -53,7 +53,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import kotlin.Unit;
 
-public class ReadStyleActivity extends MBaseActivity implements ColorPickerDialogListener {
+public class ReadStyleActivity extends MBaseActivity<IPresenter> implements ColorPickerDialogListener {
     private final int ResultSelectBg = 103;
     private final int SELECT_TEXT_COLOR = 201;
     private final int SELECT_BG_COLOR = 301;
@@ -429,7 +429,7 @@ public class ReadStyleActivity extends MBaseActivity implements ColorPickerDialo
             if(convertView==null){
                 holder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.item_read_bg, null);
-                holder.mImage = convertView.findViewById(R.id.iv_cover);
+                holder.mImage = convertView.findViewById(R.id.iv_bg);
                 holder.mTitle = convertView.findViewById(R.id.tv_desc);
                 convertView.setTag(holder);
             } else {
